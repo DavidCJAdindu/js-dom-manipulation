@@ -1,0 +1,58 @@
+// Body element, everything will be appended to the body 
+const body = document.body;
+
+// utilties 
+const br = document.createElement('br');
+
+
+// outer conatiner 
+const outerdiv = document.createElement('div');
+body.append(outerdiv);
+
+
+
+// firstname input 
+const fname_label = document.createElement('label');
+fname_label.innerText = "First name:";
+fname_label.setAttribute("for","fname");
+const fname_input = document.createElement('input');
+fname_label.setAttribute("type","text");
+fname_label.setAttribute("id","fname");
+fname_label.setAttribute("name","fname");
+
+
+// add inputs to container div   
+	outerdiv.append(fname_label, fname_input, br);
+
+
+
+
+// lastname input 
+const lname_label = document.createElement('label');
+lname_label.innerText = "First name:";
+lname_label.setAttribute("for","lname");
+const lname_input = document.createElement('input');
+lname_label.setAttribute("type","text");
+lname_label.setAttribute("id","lname");
+lname_label.setAttribute("name","lname");
+
+
+// add inputs to container div   
+	outerdiv.append(lname_label, lname_input);
+
+
+
+// buttons 
+const add_button = document.createElement('button');
+add_button.innerText = "Add";
+const sub_button = document.createElement('button');
+sub_button.innerText = "Subtract";
+const mul_button = document.createElement('button');
+mul_button.innerText = "Multiply";
+const div_button = document.createElement('button');
+div_button.innerText = "Divide";
+
+
+// add inputs to container div   
+	outerdiv.append(br, add_button, sub_button, mul_button, div_button);
+
