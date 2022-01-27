@@ -1,0 +1,59 @@
+DOM MANUPULATION
+
+> adding elemenents to the body:
+
+ 	const body = document.body 
+	body.append("Hello World");
+
+
+
+> create elements:
+
+	const h1 = document.createElement('h1')
+
+  // add text to h1
+	h1.innerText = "Hello World";
+
+  // add h1 to body  
+	body.append(h1);
+
+
+
+> modify attributes of an element:
+
+  // adds a title attribute of "hello" to h1 element 	
+	h1.setAttribute("title","hello");
+
+  // {element}.getAttribute & {element}.removeAttribute
+
+
+
+> style elements:
+
+  // styles the color of the h1 element, turns the color red 
+	h1.style.color = "red";
+
+
+  // styles the font of the h1 element, changes the font to Monospace 
+	h1.style.fontFamily = "Monospace";
+
+
+
+
+
+
+RUN IN TEXT EDITOR
+---------------------------------------------
+const body = document.body  
+
+ const h1 = document.createElement('h1');
+ h1.innerText = "Hello World";
+ h1.setAttribute("title","hello");
+
+ h1.style.color = "red";
+ h1.style.fontFamily = "Monospace";
+
+ body.append(h1);
+---------------------------------------------
+
+ 
