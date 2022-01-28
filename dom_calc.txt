@@ -1,58 +1,105 @@
 // Body element, everything will be appended to the body 
 const body = document.body;
 
-// utilties 
-const br = document.createElement('br');
 
+// conatiner 
+const container = document.createElement('div');
+body.append(container);
 
-// outer conatiner 
-const outerdiv = document.createElement('div');
-body.append(outerdiv);
-
-
-
-// firstname input 
-const fname_label = document.createElement('label');
-fname_label.innerText = "First name:";
-fname_label.setAttribute("for","fname");
-const fname_input = document.createElement('input');
-fname_label.setAttribute("type","text");
-fname_label.setAttribute("id","fname");
-fname_label.setAttribute("name","fname");
-
-
-// add inputs to container div   
-	outerdiv.append(fname_label, fname_input, br);
+// conatiner styling 
+container.style.border = "1px solid black";
+container.style.justifyContent = "center";
+container.style.padding = "5px";
+container.style.width = "300px";
 
 
 
+// first number input 
+const fnum_label = document.createElement('label');
+fnum_label.innerText = "1st Number:";
+fnum_label.setAttribute("for","fnum");
 
-// lastname input 
-const lname_label = document.createElement('label');
-lname_label.innerText = "First name:";
-lname_label.setAttribute("for","lname");
-const lname_input = document.createElement('input');
-lname_label.setAttribute("type","text");
-lname_label.setAttribute("id","lname");
-lname_label.setAttribute("name","lname");
+const fnum_input = document.createElement('input');
+fnum_input.setAttribute("type","text");
+fnum_input.setAttribute("id","firstNumber");
+fnum_input.setAttribute("name","firstNum");
+fnum_input.setAttribute("size","20");
+fnum_input.style.margin = "4px";
+const fnum_br = document.createElement('br');
 
 
 // add inputs to container div   
-	outerdiv.append(lname_label, lname_input);
+	container.append(fnum_label, fnum_input, fnum_br);
+
+
+
+
+// second number input 
+const snum_label = document.createElement('label');
+snum_label.innerText = "2nd Number:";
+snum_label.setAttribute("for","lname");
+const snum_input = document.createElement('input');
+snum_input.setAttribute("type","text");
+snum_input.setAttribute("id","secondNumber");
+snum_input.setAttribute("name","secondNum");
+snum_input.setAttribute("size","20");
+snum_input.style.margin = "4px";
+const snum_br = document.createElement('br');
+
+
+// add inputs to container div   
+	container.append(snum_label, snum_input, snum_br);
 
 
 
 // buttons 
 const add_button = document.createElement('button');
 add_button.innerText = "Add";
+add_button.style.margin = "4px";
+add_button.setAttribute("onClick","addBy()");
+add_button.setAttribute("value","add");
 const sub_button = document.createElement('button');
 sub_button.innerText = "Subtract";
+sub_button.style.margin = "4px";
+sub_button.setAttribute("onClick","subtractBy()");
+sub_button.setAttribute("value","subtract");
 const mul_button = document.createElement('button');
 mul_button.innerText = "Multiply";
+mul_button.style.margin = "4px";
+mul_button.setAttribute("onClick","multiplyBy()");
+mul_button.setAttribute("value","multiply");
 const div_button = document.createElement('button');
 div_button.innerText = "Divide";
+div_button.style.margin = "4px";
+div_button.setAttribute("onClick","divideBy()");
+div_button.setAttribute("value","divide");
 
 
 // add inputs to container div   
-	outerdiv.append(br, add_button, sub_button, mul_button, div_button);
+	container.append(add_button, sub_button, mul_button, div_button);
 
+
+
+// The Result
+	const h4 = document.createElement('h4')
+
+  // add text to h1
+	h4.innerText = "The Result Is: ";
+	h4.style.marginTop = "20px";
+
+  // add h1 to body  
+	container.append(h4);
+
+	const h4_br = document.createElement('br')
+
+  // add h1 to container  
+	container.append(h4, h4_br);
+
+
+
+// span to display result
+	const span = document.createElement('span');
+	span.setAttribute("id","result");
+
+  // add span to container 
+	container.append(span);
