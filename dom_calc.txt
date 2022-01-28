@@ -90,16 +90,57 @@ div_button.setAttribute("value","divide");
   // add h1 to body  
 	container.append(h4);
 
-	const h4_br = document.createElement('br')
+	// const h4_br = document.createElement('br')
 
   // add h1 to container  
-	container.append(h4, h4_br);
+	container.append(h4);
 
 
 
 // span to display result
 	const span = document.createElement('span');
 	span.setAttribute("id","result");
+	span.style.justifyContent = "center";
 
   // add span to container 
 	container.append(span);
+
+
+
+
+
+
+	// Calculator Functionality 
+
+function addBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        parseInt(num1);
+        num2 = document.getElementById("secondNumber").value;
+        parseInt(num2);
+        document.getElementById("result").innerHTML =  parseInt(num1 + num2);
+}
+
+function subtractBy() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        parseInt(num1);
+        num2 = document.getElementById("secondNumber").value;
+        parseInt(num2);
+        document.getElementById("result").innerHTML = num1 - num2;
+}
+
+
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+}
+
+function divideBy() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 / num2;
+}
